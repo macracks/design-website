@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPage = window.location.pathname.split("/").pop();
 
   // ✅ Run only on the landing page ******************* Important
-  if (currentPage !== 'index.html' && currentPage !== '') {
-    console.log("⏭️ Skipping slideshow — not on index.html");
+  if (!['index.html', 'landing.html', ''].includes(currentPage)) {
+    console.log("⏭️ Skipping slideshow — not a landing page");
     return;
   }
 
