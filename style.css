@@ -35,7 +35,7 @@
     opacity: 1;
   }
 
-  /* HEADER */
+  /* -------------------HEADER----------------------- */
   .header {
     position: fixed;
     top: 0;
@@ -99,6 +99,29 @@
     margin-left: 70px;
     cursor: pointer;
   }
+
+
+  /* -------------------BLACK HEADER VARIANT----------------------- */
+.header.navbar-dark {
+  background: none;
+}
+
+.header.navbar-dark .logo img {
+  filter: brightness(0%);
+}
+
+.header.navbar-dark .nav a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.header.navbar-dark .nav a:hover {
+  opacity: 0.7;
+}
+
+.header.navbar-dark .lang-switch {
+  color: black;
+}
 
 
   /* ----------------------SECTION À PROPOS---------------------- */
@@ -276,8 +299,70 @@
     opacity: 0.6;
   }
   
+/* ---------- CONTACT PAGE HERO ---------- */
+.contact-page {
+  height: calc(100vh - 75px); /* full viewport minus header */
+  margin: 0;                  /* no extra global margins */
+  overflow: hidden;           /* prevent scroll only for this page */
+}
 
+.contact-main {
+  position: absolute;
+  top: 75px;           /* below header */
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  overflow: hidden;    /* keep image contained */
+}
 
+.contact-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66%; /* 2/3 of parent width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+
+/* SVG scales perfectly inside the container */
+.contact-heading-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.contact-info {
+  text-align: right;
+  font-size: 15px;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* space between lines */
+  color: white;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.6;
+}
 
 
 
