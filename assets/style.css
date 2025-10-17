@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: auto;
+    width: 100%;
+    overflow: auto;
+    font-family: 'Satoshi', sans-serif;
+  }
+  
+  .slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* behind header */
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;       /* fill the screen*/background-position: center;  /* center the image*/
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out; /* super fast fade */
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+
+  /* -------------------HEADER----------------------- */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* above slideshow */
+
+    /*mix-blend-mode: difference;*/
+    }
+
+  /* Only on About page */
+  .about-page-body header {
+    mix-blend-mode: difference;
+  }
+  
+  .logo img {
+    height: 35px;
+    width: auto;
+    display: block;
+    }
+
+    .logo-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+      }
+  
+  .nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+    mix-blend-mode: difference;
+    font-size: 14px;
+  }
+  
+  .nav a:hover {
+    opacity: 0.7;
+  }
+
+  /*Pour differencier*/
+  .header.light .nav a {
+    color: black;
+  }
+  
+  .header.light .logo img {
+    filter: brightness(0%);
+  }
+  
+  .header.dark .nav a {
+    color: white;
+  }
+  
+  .header.dark .logo img {
+    filter: brightness(100%);
+  }
+  
+  .lang-switch {
+    margin-left: 70px;
+    cursor: pointer;
+  }
+
+
+  /* -------------------BLACK HEADER VARIANT----------------------- */
+.header.navbar-dark {
+  background: none;
+}
+
+.header.navbar-dark .logo img {
+  filter: brightness(0%);
+}
+
+.header.navbar-dark .nav a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.header.navbar-dark .nav a:hover {
+  opacity: 0.7;
+}
+
+.header.navbar-dark .lang-switch {
+  color: black;
+}
+
+/* ---------- ABOUT PAGE HEADER CONTAINER ---------- */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;  /* ensures it spans full viewport width */
+  height: 75px;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;     /* ensure no spacing */
+  padding: 0;
+}
+
+/* ---------- ABOUT PAGE HEADER STYLE ---------- */
+.header.navbar-about {
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.navbar-about .logo img {
+  filter: brightness(0%); /* black logo */
+}
+
+.header.navbar-about .nav a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.header.navbar-about .nav a:hover {
+  opacity: 0.7;
+}
+
+.header.navbar-about .lang-switch {
+  color: black;
+}
+
+/* ---------- ABOUT PAGE IMAGE SECTION ---------- */
+.about-main {
+  margin: 0;
+  padding-top: 75px; /* pushes content below header */
+}
+
+.about-photo {
+  width: calc(100% - 40px); /* 20px left + 20px right margin */
+  height: calc(100vh - 95px); /* 75px header + 20px bottom margin */
+  object-fit: cover;
+  margin: 0 20px 20px 20px;
+  display: block;
+}
+
+  /* ----------------------SECTION À PROPOS---------------------- */
+
+  /* UPDATED CODE*/
+.about-page {
+  height: calc(100vh - 75px); /* fills screen minus header */
+  margin: 0;
+  overflow: hidden; /* avoids scrollbars */
+}
+
+  /* HERO IMAGE SECTION */
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* fills the entire screen */
+    overflow: hidden;
+}
+  
+.about-hero .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills screen without distortion */
+    object-position: center; /* center the image */
+}
+  
+  /* ABOUT CONTENT SECTION */
+.about-content {
+    width: 100%;
+    padding: 30px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    background: white; /* or transparent if you want your image behind */
+}
+  
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+  
+.about-left {
+    width: 450px;
+}
+  
+.about-right {
+    flex: 1;
+}
+  
+.about-left h2 {
+    font-size: 2.5rem;
+    line-height: 1.05;
+    font-weight: 400;
+    text-align: left;
+}
+  
+.about-right p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 600px;
+}
+
+.about-right p a,
+.about-right p a:visited {
+    color: black;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.about-right p a:hover {
+    opacity: 0.6;  /* subtle fade effect */
+}
+
+
+.distinction {
+    display: inline-flex;
+    align-items: center;       /* vertically align arrow + text */
+    gap: 15px;                 /* space between arrow and text */
+    margin: 0;                 /* remove default p margin */
+    cursor: pointer; 
+}
+  
+.distinction a {
+    color: black;              /* make link black */
+    text-decoration: none;     /* remove underline */
+    transition: color 0.2s ease;
+}
+  
+.distinction:hover a,
+.distinction a:hover {
+  opacity: 0.6;
+}
+  
+.arrow {
+    width: 16px;               /* adjust arrow size */
+    height: 16px;
+    display: block;
+    transition: transform 0.3s ease; /* for future hover rotation */
+}
+  
+/* rotate arrow when paragraph is hovered */
+.distinction:hover .arrow,
+.distinction .arrow:hover {
+  transform: rotate(-45deg);
+}
+
+
+/* ---------- SECTION DIVIDER ---------- */
+.section-divider {
+    border: none;           
+    height: 1px;            
+    background-color: #000; 
+    margin-top: -60px; 
+    margin-bottom: -60px;   
+    width: 100%;
+}
+
+.section-divider-2 {
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin-top: -10px; 
+    margin-bottom: 8px; 
+}
+
+  /* ---------- FOOTER ---------- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* align everything at the bottom */
+    padding: 20px;
+    padding-top: 100px;
+    background-color: white;
+  }
+  
+  .footer-left {
+    flex: 1;
+  }
+  
+  .footer-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0); /* turns white SVG black */
+  }
+  
+  .footer-right {
+    width: 394px;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 25px;
+  }
+  
+  .footer-right p {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .footer-right a {
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.2s ease;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 30px; /* space between Email and LinkedIn */
+}
+  
+  .footer-right a:hover {
+    opacity: 0.6;
+  }
+  
+/* ---------- CONTACT PAGE HERO ---------- */
+.contact-page {
+  height: calc(100vh - 75px); /* full viewport minus header */
+  margin: 0;                  /* no extra global margins */
+  overflow: hidden;           /* prevent scroll only for this page */
+}
+
+.contact-main {
+  position: absolute;
+  top: 75px;           /* below header */
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  overflow: hidden;    /* keep image contained */
+}
+
+.contact-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66%; /* 2/3 of parent width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+
+/* SVG scales perfectly inside the container */
+.contact-heading-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.contact-info {
+  text-align: right;
+  font-size: 15px;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* space between lines */
+  color: white;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.6;
+}
+
+
+
+  @media (max-width: 1100px) {
+
+    .about-content {
+        gap: 40px;
+    }
+
+    .about-section {
+      padding-top: 0px;
+      flex-direction: column;
+      align-items: flex-start; /* keeps everything aligned left */
+      gap: 20px; /* slightly smaller spacing */
+    }
+  
+    .about-left,
+    .about-right p {
+      max-width: 800px;
+    }
+  
+    .about-left {
+      margin-bottom: 0px; /* spacing between big text and paragraph */
+    }
+    .section-divider {
+        border: none;           /* remove default border */
+        height: 1px;            /* thickness of the line */
+        background-color: #000; /* perfect black */
+        margin-top: -11px; 
+        margin-bottom: -9px;           /* space above and below the line */
+        width: 100%;            /* spans full width */
+    }
+
+    .footer {
+        flex-direction: column;   /* stack logo on top of texts */
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .footer-left {
+        width: 100%;     /* make the container full width */
+        flex: none;      /* remove the flex-grow restriction */
+    }    
+
+    .footer-logo {
+        width: 100%;              /* logo stretches full width */
+    }
+
+    .footer-right {
+        width: 100%;
+        flex-direction: row;       /* keep texts side by side */
+        justify-content: space-between; /* Montreal left, links right */
+        align-items: flex-end;
+        text-align: left;
+        padding-left: 0px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 30px; /* space between Email and LinkedIn */
+    }
+  }
+
+  .header-placeholder {
+    display: block;
+  }
+  
