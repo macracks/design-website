@@ -49,6 +49,11 @@
 
     /*mix-blend-mode: difference;*/
     }
+
+  /* Only on About page */
+  .about-page-body header {
+    mix-blend-mode: difference;
+  }
   
   .logo img {
     height: 35px;
@@ -123,9 +128,70 @@
   color: black;
 }
 
+/* ---------- ABOUT PAGE HEADER CONTAINER ---------- */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;  /* ensures it spans full viewport width */
+  height: 75px;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;     /* ensure no spacing */
+  padding: 0;
+}
+
+/* ---------- ABOUT PAGE HEADER STYLE ---------- */
+.header.navbar-about {
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.navbar-about .logo img {
+  filter: brightness(0%); /* black logo */
+}
+
+.header.navbar-about .nav a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.header.navbar-about .nav a:hover {
+  opacity: 0.7;
+}
+
+.header.navbar-about .lang-switch {
+  color: black;
+}
+
+/* ---------- ABOUT PAGE IMAGE SECTION ---------- */
+.about-main {
+  margin: 0;
+  padding-top: 75px; /* pushes content below header */
+}
+
+.about-photo {
+  width: calc(100% - 40px); /* 20px left + 20px right margin */
+  height: calc(100vh - 95px); /* 75px header + 20px bottom margin */
+  object-fit: cover;
+  margin: 0 20px 20px 20px;
+  display: block;
+}
 
   /* ----------------------SECTION À PROPOS---------------------- */
 
+  /* UPDATED CODE*/
+.about-page {
+  height: calc(100vh - 75px); /* fills screen minus header */
+  margin: 0;
+  overflow: hidden; /* avoids scrollbars */
+}
 
   /* HERO IMAGE SECTION */
 .about-hero {
@@ -148,7 +214,7 @@
   /* ABOUT CONTENT SECTION */
 .about-content {
     width: 100%;
-    padding: 30px 20px;
+    padding: 30px 20px 10px;
     display: flex;
     flex-direction: column;
     gap: 120px;

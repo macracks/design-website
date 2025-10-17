@@ -106,38 +106,37 @@ window.addEventListener('pageshow', () => {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('[HEADER DEBUG] DOM fully loaded');
 
+  const headerContainer = document.querySelector('.header-container');
   const header = document.querySelector('.header');
-  if (!header) {
-    console.error('[HEADER DEBUG] ❌ No element with class .header found.');
+  const hero = document.querySelector('.about-photo') || document.querySelector('.about-hero');
+
+  if (!headerContainer || !header) {
+    console.error('[HEADER DEBUG] ❌ Missing header or container element.');
     return;
-  } else {
-    console.log('[HEADER DEBUG] ✅ Header found:', header);
   }
 
-  const hero = document.querySelector('.about-hero');
+  console.log('[HEADER DEBUG] ✅ Header + container found.');
 
   const updateHeader = () => {
-    const headerHeight = header.offsetHeight;
-    const triggerPoint = hero ? hero.offsetHeight - headerHeight : 500;
+    const headerHeight = headerContainer.offsetHeight;
+    const offsetAdjustment =77; // delay trigger by this many pixels
+    const triggerPoint = hero
+      ? hero.offsetHeight - headerHeight + offsetAdjustment
+      : 500;
     const scrollY = window.scrollY;
 
     if (scrollY >= triggerPoint) {
       const translateY = Math.min(scrollY - triggerPoint, headerHeight);
-      header.style.transform = `translateY(-${translateY}px)`;
-      console.log('[HEADER DEBUG] → Header translating up:', translateY);
+      headerContainer.style.transform = `translateY(-${translateY}px)`;
+      console.log('[HEADER DEBUG] → Header container translating up:', translateY);
     } else {
-      header.style.transform = 'translateY(0)';
-      console.log('[HEADER DEBUG] → Header at top');
+      headerContainer.style.transform = 'translateY(0)';
+      console.log('[HEADER DEBUG] → Header container at top');
     }
   };
 
-  // Run on scroll
   window.addEventListener('scroll', updateHeader);
-
-  // Run immediately on resize to recalc trigger and transform
   window.addEventListener('resize', updateHeader);
-
-  // Also run once at load to ensure correct initial position
   updateHeader();
 
   console.log('[HEADER DEBUG] ✅ Scroll & resize listeners attached');
