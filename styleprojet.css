@@ -165,7 +165,8 @@
 
 .project-image {
     width: 100%;
-    border-radius: 4px;
+    border-radius: 3px;
+    transition: opacity 0.3s ease;
 }
 
 .project-title {
@@ -199,6 +200,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 40px;
+    align-items: end;
 }
 
 @media (max-width: 900px) {
@@ -230,7 +232,7 @@
 
 .project-info-grid {
     display: grid;
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .project-image-row {
@@ -251,3 +253,21 @@
     padding-right: 4px;
     border-radius: 4px;
 }*/
+.project-div {
+  cursor: pointer;
+}
+
+.project-div:hover .project-image{
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.project-link:link,
+.project-link:visited,
+.project-link:hover,
+.project-link:active {
+  display: block;
+  text-decoration: none; /* remove the underline */
+  color: inherit; /* keep text colors as originally defined */
+}
