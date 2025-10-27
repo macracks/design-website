@@ -101,7 +101,7 @@ langSwitch.addEventListener('click', () => {
 window.addEventListener('pageshow', () => {
     document.body.offsetHeight; // forces reflow
 });
-
+/*
 // ---------- HEADER SCROLL SLIDE-UP ----------
 document.addEventListener('DOMContentLoaded', () => {
   console.log('[HEADER DEBUG] DOM fully loaded');
@@ -141,3 +141,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log('[HEADER DEBUG] ✅ Scroll & resize listeners attached');
 });
+*/

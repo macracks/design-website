@@ -84,7 +84,7 @@
     justify-content: space-between;
     align-items: flex-end; /* align everything at the bottom */
     padding: 20px;
-    padding-top: 100px;
+    padding-top: 40px;
     background-color: white;
   }
   
@@ -196,10 +196,11 @@
 
 .project-grid {
     padding: 20px;
+    padding-top: 75px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    row-gap: 40px;
+    row-gap: 20px;
     align-items: end;
 }
 
