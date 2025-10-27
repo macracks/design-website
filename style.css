@@ -347,7 +347,7 @@
   
   .footer-right p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 15px;
     color: black;
   }
   
@@ -436,6 +436,7 @@
 
   @media (max-width: 1100px) {
 
+
     .about-content {
         gap: 40px;
     }
@@ -497,4 +498,39 @@
   .header-placeholder {
     display: block;
   }
-  
+
+/* Normal mobile*/
+@media (max-width: 450px) {
+  .nav a {
+
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  .about-left {
+    width: 325px;
+  }
+  .footer-right p {
+    margin-left: 0;
+    font-size: 12px;
+  }
+}
+/* DESIGNER INDUSTRIEL ET GRAPHIQUE*/
+@media (max-width: 370px) {
+  .about-left {
+    width: 310px;
+  }
+}
+/* Small mobile*/
+@media (max-width: 350px) {
+  .nav a {
+    margin-left: 11px;
+    font-size: 11px;
+  }
+  .about-left {
+    width: 310px;
+  }
+  .footer-right p {
+    margin-left: 0;
+    font-size: 11px;
+  }
+}

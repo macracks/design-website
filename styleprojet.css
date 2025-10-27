@@ -271,3 +271,27 @@
   text-decoration: none; /* remove the underline */
   color: inherit; /* keep text colors as originally defined */
 }
+
+/* Normal mobile*/
+@media (max-width: 450px) {
+  .nav a {
+    
+    margin-left: 20px;
+    font-size: 11px;
+  }
+  .footer-right p {
+    margin-left: 0;
+    font-size: 12px;
+  }
+}
+/* Small mobile*/
+@media (max-width: 350px) {
+  .nav a {
+    margin-left: 11px;
+    font-size: 11px;
+  }
+  .footer-right p {
+    margin-left: 0;
+    font-size: 11px;
+  }
+}
