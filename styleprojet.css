@@ -283,6 +283,12 @@
     margin-left: 0;
     font-size: 12px;
   }
+  .project-title {
+    font-size: 13px;
+  }
+  .project-tags {
+    font-size: 12px;
+  }
 }
 /* Small mobile*/
 @media (max-width: 350px) {
