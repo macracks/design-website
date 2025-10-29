@@ -1,0 +1,162 @@
+/* -------------------HEADER----------------------- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* above slideshow */
+
+    /*mix-blend-mode: difference;*/
+}
+  
+.logo img {
+    height: 35px;
+    width: auto;
+    display: block;
+}
+
+.logo-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+    mix-blend-mode: difference;
+    font-size: 14px;
+}
+  
+.nav a:hover {
+    opacity: 0.7;
+}
+
+/*Pour differencier*/
+.header.light .nav a {
+    color: black;
+}
+  
+.header.light .logo img {
+    filter: brightness(0%);
+}
+  
+.header.dark .nav a {
+    color: white;
+}
+  
+.header.dark .logo img {
+    filter: brightness(100%);
+}
+  
+.lang-switch {
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+
+/* -------------------BLACK HEADER VARIANT----------------------- */
+.header.navbar-dark {
+  background: none;
+}
+
+.header.navbar-dark .logo img {
+  filter: brightness(0%);
+}
+
+.header.navbar-dark .nav a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.header.navbar-dark .nav a:hover {
+  opacity: 0.7;
+}
+
+.header.navbar-dark .lang-switch {
+  color: black;
+}
+
+/* ---------- ABOUT PAGE HEADER CONTAINER ---------- */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;  /* ensures it spans full viewport width */
+  height: 75px;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;     /* ensure no spacing */
+  padding: 0;
+}
+
+/* ---------- ABOUT PAGE HEADER STYLE ---------- */
+.header.navbar-about {
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.navbar-about .logo img {
+  filter: brightness(0%); /* black logo */
+}
+
+.header.navbar-about .nav a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.header.navbar-about .nav a:hover {
+  opacity: 0.7;
+}
+
+.header.navbar-about .lang-switch {
+  color: black;
+}
+
+@media (max-width: 1100px) {
+    .about-content {
+        gap: 40px;
+    }
+
+    .about-section {
+        padding-top: 0px;
+        flex-direction: column;
+        align-items: flex-start; /* keeps everything aligned left */
+        gap: 20px; /* slightly smaller spacing */
+    }
+  
+}
+
+.header-placeholder {
+    display: block;
+}
+
+/* Normal mobile*/
+@media (max-width: 450px) {
+    .nav a {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+}
+/* Small mobile*/
+@media (max-width: 350px) {
+    .nav a {
+        margin-left: 11px;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,97 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* align everything at the bottom */
+    padding-top: 40px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+  
+.footer-left {
+    flex: 1;
+}
+  
+.footer-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0); /* turns white SVG black */
+}
+  
+.footer-right {
+    width: 394px;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 25px;
+}
+  
+.footer-right p {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+}
+  
+.footer-right a {
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px; /* space between Email and LinkedIn */
+}
+  
+.footer-right a:hover {
+    opacity: 0.6;
+}
+  
+
+@media (max-width: 900px) {
+    .footer {
+        flex-direction: column;   /* stack logo on top of texts */
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .footer-left {
+        width: 100%;     /* make the container full width */
+        flex: none;      /* remove the flex-grow restriction */
+    }    
+
+    .footer-logo {
+        width: 100%;              /* logo stretches full width */
+    }
+
+    .footer-right {
+        width: 100%;
+        flex-direction: row;       /* keep texts side by side */
+        justify-content: space-between; /* Montreal left, links right */
+        align-items: flex-end;
+        text-align: left;
+        padding-left: 0px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 30px; /* space between Email and LinkedIn */
+    }
+}
+
+/* Normal mobile*/
+@media (max-width: 450px) {
+    .footer-right p {
+      margin-left: 0;
+      font-size: 12px;
+    }
+}
+
+/* Small mobile*/
+@media (max-width: 350px) {
+    .footer-right p {
+      margin-left: 0;
+      font-size: 11px;
+    }
+}

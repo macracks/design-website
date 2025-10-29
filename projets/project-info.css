@@ -1,0 +1,112 @@
+.hero {
+    width: 100%;
+    height: calc(100vh - 110px);
+    border-radius: 3px;
+    overflow: hidden;
+    padding-top: 75px; 
+    padding-left: 0px;
+    position: relative;
+    margin-left: auto;
+}
+  
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+}
+ 
+.project-title {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.project-title img {
+    /*max-width: calc(100vw - 40px);*/
+    /*width: auto;*/
+    max-height: 70px;
+    display: block;
+}
+
+@media (min-aspect-ratio: 1.3/1) {
+    .hero {
+        right: 0;
+        height: calc(100vh);
+        max-width: calc(100vw - 130px);
+        padding-bottom: 20px; /* leave space at bottom */
+        padding-top: 75px;    /* header space remains */
+    }
+  
+    .project-title {
+        bottom: 0;
+        left: 0;
+        padding-left: 20px;
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        max-height: 100px;
+        max-width: calc(100vh - 75px - 20px );
+        margin: 0;
+    }
+    
+}
+
+.information {
+    padding-bottom: 60px;
+}
+
+.project-divider {
+    display: block;
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    transform: translateZ(0);
+  }
+
+.project-grid {
+    padding: 20px;
+    padding-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: end;
+}
+
+.year-client-grid {
+    font-size: 16.5px;
+    font-weight: 500;
+    padding: 16px 0 60px 0;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: end;
+}
+
+.annee {
+    text-align: left;
+}
+
+.client {
+    text-align: right;
+}
+
+.descriptor {
+    color: rgb(160, 160, 160);
+}
+
+.project-description {
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 900px;
+}
+
+@media (min-aspect-ratio: 1.3/1) {
+    .information {
+        display: block;
+        position: relative;
+        transform: translateY(-70px);
+    }
+}
