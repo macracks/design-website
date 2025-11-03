@@ -10,10 +10,20 @@
     border-radius: 3px;
 }
 
-/* 1. FULL WIDTH IMAGE */
+/* 1.1 FULL WIDTH IMAGE */
 .image-full {
     width: 100%;
     margin-bottom: 20px; /* spacing below each section */
+}
+
+/* 1.2 FULL WIDTH VIDEO */
+.image-full video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 85px);
+    object-fit: cover;
+    border-radius: 3px;
 }
 
 /* 2. TWO-COLUMN GRID */
@@ -65,4 +75,33 @@
     .project-pictures .image-portrait img{
         max-height: none;
     }
+}
+
+/* -------------- RESPONSIVE  TEXT -------------- */
+@media screen and (max-width: 768px) {
+    .text-block {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+}
+
+
+
+/* Latrompette project responsive image */
+.latrompette-hero picture,
+.latrompette-hero img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 85px);
+    border-radius: 3px;
+}
+
+.latrompette-image picture,
+.latrompette-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 85px);
+  object-fit: cover;
+  border-radius: 3px;
 }

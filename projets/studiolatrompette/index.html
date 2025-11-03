@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Latrompette | marekblais</title>
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../footer.css">
+  <link rel="stylesheet" href="../project-pictures.css">
+  <link rel="stylesheet" href="../project-info.css">
+  <link rel="stylesheet" href="../project-layout.css">
+  <!-- Satoshi from Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Chivo Mono from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <header class="header navbar-about">
+          <div class="logo">
+            <a href="../../">
+              <img src="../../assets/logo.svg" alt="Logo">
+            </a>
+          </div>
+          <nav class="nav">
+            <a href="../">Projets</a>
+            <a href="../../a-propos" class="active">À propos</a>
+            <a href="../../contacter">Contacter</a>
+            <a href="../../en/projects/studiolatrompette" class="lang-switch">EN</a>
+          </nav>
+        </header>
+    </div>
+
+    <main class="project-info">
+
+        <section class="hero latrompette-hero">
+            <picture>
+                <!-- Portrait version for screens <= 900px -->
+                <source srcset="assets/latrompette_physicalisation_portrait.avif" media="(max-width: 900px)">
+                <!-- Default landscape version -->
+                <img src="assets/latrompette_physicalisation_paysage01.avif" alt="Project hero image">
+            </picture>
+        </section>
+
+        <div class="project-title">
+            <img src="assets/studiolatrompette.svg" alt="Studio Latrompette">
+        </div>
+
+        <section class="information">
+            <div class="project-divider"></div>
+            <div class="year-client-grid">
+                <div class="annee">
+                    <p class="descriptor">Année</p>
+                    <p class="">2024</p>
+                </div>
+                <div class="client">
+                    <p class="descriptor">Client</p>
+                    <p>Studio Latrompette</p>
+                </div>
+            </div>
+            <p class="project-description">Ce studio multidisciplinaire est une agence créative ayant 15 ans d’expérience en création de contenu numérique. Son expertise s’étend bien au-delà de la production, englobant la conception, la réalisation et le peaufinement numérique. Son plus grand atout: la cinématographie. Ici, on demande un logo inspiré du cadrage de caméra, sans tomber dans son archétype.</p>
+            <br>
+            <p class="project-description">On obtient un logo tiré des lettres L et T qui font référence au nom du studio. Le logo résultant est clair, propre et symbolique des services offerts par le studio.</p>
+        </section>
+        
+        <section class="project-pictures">
+
+            <!-- 1. Full width image -->
+            <div class="image-full">
+                <video autoplay loop muted playsinline>
+                    <source src="assets/latrompette_animationlogo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- 2. Single portrait -->
+            <div class="image-portrait">
+                <img src="assets/latrompette_colors.avif" alt="Latrompette Colors">
+            </div>
+
+            <!-- 3. Two-column grid -->
+            <div class="image-two">
+                <img src="assets/latrompette_sticker.avif" alt="Latrompette Sticker">
+                <img src="assets/latrompette_drone.avif" alt="Latrompette Drone">
+            </div>
+
+            <!-- 5. Text block -->
+            <div class="text-block">
+                <p>
+                    Les concepts originaux et créatifs sont essentiels pour se démarquer. Sur le site web, on y retrouve la physicalisation ludique du logo. Celle-ci attire l’attention et enrichit l’expérience visuelle, tout en faisant un clin d’œil aux services du studio.
+                </p>
+            </div>
+
+            <!-- 6. Full width image -->
+            <div class="image-full latrompette-image">
+                <picture>
+                <source srcset="assets/latrompette_physicalisation_paysage02.avif" media="(max-width: 900px)">
+                <img src="assets/latrompette_physicalisation_paysage01.avif" alt="Full width image 3">
+                </picture>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+        <img src="../../assets/logo-long.svg" alt="Logo Marek Blais" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <p>Montréal, QC</p>
+            <div class="footer-links">
+            <p><a href="mailto:marekblais@hotmail.ca">marekblais@hotmail.ca</a></p>
+            <p><a href="https://www.linkedin.com/in/marek-blais" target="_blank">LinkedIn</a></p>
+        </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
