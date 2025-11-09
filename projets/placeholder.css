@@ -45,8 +45,8 @@
 /* Links */
 .placeholder-links {
     font-family: 'Satoshi', sans-serif;
-    font-weight: 400;
-    font-size: 1.1rem;
+    font-weight: 400 !important;
+    font-size: 18px !important;
 }
 
 .placeholder-links a {
@@ -62,11 +62,11 @@
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .placeholder-explanation {
-        font-size: 1rem;
+        font-size: 18px !important;
         line-height: 1.4;
     }
     .placeholder-links {
-        font-size: 1rem;
+        font-size: 16px !important;
     }
 }
 
