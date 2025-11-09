@@ -182,7 +182,7 @@
   object-fit: cover;
   margin: 0 20px 20px 20px;
   display: block;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
   /* ----------------------SECTION À PROPOS---------------------- */
@@ -387,7 +387,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .contact-text-container {

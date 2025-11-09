@@ -51,6 +51,33 @@ function updateHeroDimensions() {
 
 updateHeroDimensions();
 
-window.addEventListener('DOMContentLoaded', updateHeroDimensions);
-
+window.addEventListener('DOMContentLoaded', () => {
+    updateHeroDimensions();
+  });
+  
+window.addEventListener('load', updateHeroDimensions);
+  
 window.addEventListener('resize', updateHeroDimensions);
+  
+
+
+
+
+//DATES
+document.addEventListener("DOMContentLoaded", () => {
+    // French date
+    const dateSpanFR = document.getElementById('current-date');
+    if (dateSpanFR) {
+      const todayFR = new Date();
+      const optionsFR = { year: 'numeric', month: 'long', day: 'numeric' };
+      dateSpanFR.textContent = todayFR.toLocaleDateString('fr-FR', optionsFR);
+    }
+  
+    // English date
+    const dateSpanEN = document.getElementById('current-date-en');
+    if (dateSpanEN) {
+      const todayEN = new Date();
+      const optionsEN = { year: 'numeric', month: 'long', day: 'numeric' };
+      dateSpanEN.textContent = todayEN.toLocaleDateString('en-US', optionsEN);
+    }
+  });

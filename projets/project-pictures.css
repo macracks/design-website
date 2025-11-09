@@ -7,7 +7,7 @@
     height: auto;
     max-height: calc(100vh - 85px);
     object-fit: cover;
-    border-radius: 3px;
+    border-radius: 6px;
 }
 
 /* 1.1 FULL WIDTH IMAGE */
