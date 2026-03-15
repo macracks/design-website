@@ -1,5 +1,5 @@
 .project-container {
-  margin: 150px 10% 0 10%;
+  margin: 100px 10% 0 10%;
   transition: 0.3s;
 }
 /* ── FILTER BAR ─────────────────────────────────────────────── */
@@ -130,7 +130,7 @@
 
 @media (max-width: 767px) {
   .project-container {
-    margin: 150px 20px 0 20px;
+    margin: 100px 20px 0 20px;
     transition: 0.3s;
   }
   .projects-grid {
