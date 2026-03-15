@@ -1,0 +1,22 @@
+.footer-container {
+  padding-top: 150px;
+  padding-bottom: 30px;
+  height: auto;
+  margin: 0px 10%;
+}
+.footer-logo img {
+  width: 100%;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 1fr 170px 58px;
+  gap: 20px
+}
+
+.footer-info p {
+  display: block;
+}
+.footer-city {
+  display: block;
+}

@@ -1,0 +1,41 @@
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 550;
+
+  margin-top: 2em;
+  margin-right: 20px;
+  padding: 7px 15px 7px 10px;
+
+  background-color: #fce0e5;
+  border: 1px solid #fce0e5;
+  color: #E83151;
+  text-decoration: none;
+
+  font-size: 0.85em;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.cv-arrow {
+  height: 0.8em;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+/* Hover state */
+.cv-button:hover {
+  border: 1px solid #E83151;
+}
+
+.cv-button:hover .cv-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Click / active state */
+.cv-button:active {
+  border: 1px solid #E83151;
+}

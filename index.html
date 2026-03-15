@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Marek Blais</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/transition.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/landing.css">
+  <link rel="stylesheet" href="styles/carrousel.css">
+</head>
+<script>
+  window.addEventListener("load", () => {
+    const overlay = document.querySelector(".page-transition");
+    overlay.classList.add("fade-out");
+  });
+</script>
+<body>
+  <!-- WHITE FADE TRANSITION -->
+
+  <div class="page-transition"></div>
+
+  <!--<div class="page-transition"></div>-->
+  <div class="header-box">
+    <nav>
+      <a href="/">
+        <div class="portfolio-logo">
+          <img src="assets/marekblais.svg">
+        </div>
+      </a>
+
+      <ul class="navigation-list">
+        <li><a href="/projets">Projets</a></li>
+        <li><a href="/a-propos">À propos</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hero-text">
+    <p>Designer montréalais, spécialisé</p> <br>
+    <div class="image-outer-container">
+      <div class="image-inner-container">
+        <img src="assets/graphique.jpg" alt="graphique">
+      </div>
+    </div>
+    <p>graphique et</p> <br class="web-break">
+    <div class="image-outer-container">
+      <div class="image-inner-container">
+        <img src="assets/industriel.jpg" alt="industriel">
+      </div>
+    </div>
+    <p>industriel</p>
+    <p class="placeholder">Designer montréalais, spécialisé graphique et industriel</p>
+  </div>
+  <div class="carrousel">
+    <div class="group">
+      <div class="card">
+        <img src="assets/carrousel/carrousel1.jpg">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel3.avif">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel2.avif">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel4.jpg">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel5.jpg">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel6.jpg">
+      </div>
+    </div>
+    <div aria-hidden class="group">
+      <div class="card">
+        <img src="assets/carrousel/carrousel1.jpg">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel3.avif">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel2.avif">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel4.jpg">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel5.jpg">
+      </div>
+      <div class="card">
+        <img src="assets/carrousel/carrousel6.jpg">
+      </div>
+    </div>
+  </div>
+  <script src="scripts/transition.js"></script>
+</body>
+</html>

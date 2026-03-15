@@ -1,0 +1,17 @@
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.page-transition.fade-out {
+  opacity: 0;
+}
+
+.page-transition.fade-in {
+  opacity: 1;
+}

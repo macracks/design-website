@@ -1,0 +1,143 @@
+.project-container {
+  margin: 150px 10% 0 10%;
+  transition: 0.3s;
+}
+/* ── FILTER BAR ─────────────────────────────────────────────── */
+
+.filter-bar {
+  margin-bottom: 30px;
+  /* Prevent the bar itself from clipping the scrollbar on iOS */
+  overflow: hidden;
+  padding: 0;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;          /* Never wrap — scroll instead */
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  /* Horizontal scroll on narrow screens */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;      /* Hide scrollbar Firefox */
+}
+
+.filter-list::-webkit-scrollbar {
+  display: none;              /* Hide scrollbar Chrome/Safari */
+}
+
+/* "Tous" gets extra right margin to create the big visual gap */
+.filter-list li:first-child {
+  margin-right: 1.2em;
+}
+
+/* All other items sit close together */
+.filter-list li + li {
+  margin-right: 1.2em;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 450;
+  color: inherit;
+  white-space: nowrap;
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+.filter-btn:hover {
+  opacity: 0.7;
+}
+
+.filter-btn.active {
+  opacity: 1;
+}
+
+
+/* ── PROJECT GRID ───────────────────────────────────────────── */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;         /* Crucial for the Pinterest / masonry look */
+}
+
+
+/* ── PROJECT CARD ───────────────────────────────────────────── */
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image container: clips the padding animation */
+.project-card__img-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-card__img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;               /* Image dictates its own height — no cropping */
+  padding: 0;
+  transition: 0.3s ease;
+}
+
+/* Hover: image shrinks inward with padding */
+.project-card:hover .project-card__img-wrapper img {
+  scale: 0.983;
+  transition: 0.3s ease;
+}
+
+
+/* ── TAG PILLS AND TITLE ──────────────────────────────────────────────── */
+.project-title {
+  margin-top: 6px;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;            /* Tags CAN line-break if there are many */
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  display: inline-block;
+  background: #fce0e5;
+  color: #E83151;
+  font-size: 0.85rem;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+
+/* ── MOBILE: single column below 767px ──────────────────────── */
+
+@media (max-width: 767px) {
+  .project-container {
+    margin: 150px 20px 0 20px;
+    transition: 0.3s;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card__img-wrapper img {
+    border-radius: 6px;
+    transition: 0.3s ease;
+  }
+}

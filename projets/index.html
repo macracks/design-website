@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets | Marek Blais</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/transition.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/button.css">
+  <link rel="stylesheet" href="../styles/contact.css">
+  <link rel="stylesheet" href="../styles/projets.css">
+</head>
+<script>
+  window.addEventListener("load", () => {
+    const overlay = document.querySelector(".page-transition");
+    overlay.classList.add("fade-out");
+  });
+</script>
+<body>
+  <!-- WHITE FADE TRANSITION -->
+
+  <div class="page-transition"></div>
+
+  <!--<div class="page-transition"></div>-->
+  <div class="header-box">
+    <nav>
+      <a href="/">
+        <div class="portfolio-logo">
+          <img src="../assets/marekblais.svg">
+        </div>
+      </a>
+
+      <ul class="navigation-list">
+        <li><a href="/projets">Projets</a></li>
+        <li><a href="/a-propos">À propos</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="project-container">
+    <main class="projects-main">
+    <!-- ── FILTER BAR ─────────────────────────────────────────── -->
+      <nav class="filter-bar" aria-label="Filtres de projets">
+        <ol class="filter-list">
+          <li><button class="filter-btn active" data-filter="tous">Tous</button></li>
+          <li><button class="filter-btn" data-filter="identite">Identité</button></li>
+          <li><button class="filter-btn" data-filter="logo">Logo</button></li>
+          <li><button class="filter-btn" data-filter="visuel">Visuel</button></li>
+          <li><button class="filter-btn" data-filter="affiche">Affiche</button></li>
+          <li><button class="filter-btn" data-filter="objet">Objet</button></li>
+          <li><button class="filter-btn" data-filter="service">Service</button></li>
+        </ol>
+      </nav>
+    
+      <!-- ── PROJECT GRID ───────────────────────────────────────── -->
+      <section class="projects-grid" id="projects-grid">
+    
+        <!-- PROJECT CARD TEMPLATE — duplicate and fill in for each project -->
+        <!-- data-tags must match the data-filter values above, space-separated -->
+    
+        <a href="[lien-projet-1]" class="project-card" data-tags="objet">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail1.jpg" alt="[Nom du projet 1]" loading="lazy">
+          </div>
+          <p class="project-title">Volumique 2023</p>
+          <div class="project-card__tags">
+            <span class="tag">OBJET</span>
+          </div>
+        </a>
+    
+        <a href="[lien-projet-2]" class="project-card" data-tags="objet identite">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail2.jpg" alt="[Nom du projet 2]" loading="lazy">
+          </div>
+          <p class="project-title">Struthio</p>
+          <div class="project-card__tags">
+            <span class="tag">OBJET</span>
+            <span class="tag">IDENTITÉ</span>
+          </div>
+        </a>
+    
+        <a href="[lien-projet-3]" class="project-card" data-tags="identite logo">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail3.jpg" alt="[Nom du projet 3]" loading="lazy">
+          </div>
+          <p class="project-title">Studio Latrompette</p>
+          <div class="project-card__tags">
+            <span class="tag">IDENTITÉ</span>
+            <span class="tag">LOGO</span>
+          </div>
+        </a>
+    
+        <a href="[lien-projet-4]" class="project-card" data-tags="logo visuel">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail4.jpg" alt="[Nom du projet 4]" loading="lazy">
+          </div>
+          <p class="project-title">Frandon Seafoods</p>
+          <div class="project-card__tags">
+            <span class="tag">LOGO</span>
+            <span class="tag">VISUEL</span>
+          </div>
+        </a>
+    
+      </section>
+    
+    </main>
+  </div>
+
+  <footer class="footer-container"> <!-- SECTION FOOTER -->
+    <div>
+      <img src="../assets/marekblais.svg">
+      <div class="footer-info">
+        <p class="footer-city">Montréal, QC</p>
+        <p>marekblais@hotmail.ca</p>
+        <p>LinkedIn</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../scripts/transition.js"></script>
+  <script src="../scripts/tagpills.js"></script>
+</body>
+</html>
