@@ -3,15 +3,18 @@
   padding-bottom: 30px;
   height: auto;
   margin: 0px 10%;
+  transition: 0.3s;
 }
 .footer-logo img {
   width: 100%;
 }
 
 .footer-info {
+  font-size: inherit;
   display: grid;
-  grid-template-columns: 1fr 170px 58px;
-  gap: 20px
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+  transition: 0.3s;
 }
 
 .footer-info p {
@@ -20,3 +23,27 @@
 .footer-city {
   display: block;
 }
+
+@media (max-width: 767px) {
+  .footer-container {
+    margin: 0px 20px;
+    transition: 0.3s;
+  }
+  .footer-info {
+    font-size: 0.93em;
+    transition: 0.3s;
+  }
+}
+@media (max-width: 425px) {
+  .footer-info {
+    font-size: 13px;
+    transition: 0.3s;
+  }
+}
+@media (max-width: 355px) {
+  .footer-info {
+    font-size: 11px;
+    transition: 0.3s;
+  }
+}
+

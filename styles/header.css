@@ -13,6 +13,7 @@ nav {
   align-items: center; 
   height: 100%;
   padding: 0 20px;
+  transition: 0.3s;
 }
 
 .portfolio-logo {
@@ -44,6 +45,7 @@ nav > a {
 @media (max-width: 425px) {
   nav {
     font-size: 13px;
+    transition: 0.3s;
   }
   .portfolio-logo {
     width: 110px;
