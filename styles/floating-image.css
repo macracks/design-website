@@ -60,6 +60,7 @@
   .right-image-grid {
     height: 240px;
     grid-template-rows: 240px 0 0;
+    transition: 0.3s ease;
   }
 }
 
@@ -69,13 +70,7 @@
   .right-image-grid {
     height: 180px;
     grid-template-rows: 180px 0 0;
-    transition: 0.3s;
-  }
-  .right {
-    justify-self: right;
-    min-height: 20px;
-    max-height: 180px;
-    transition: 0.3s;
+    transition: 0.3s ease;
   }
 }
 
@@ -83,13 +78,7 @@
   .right-image-grid {
     height: 125px;
     grid-template-rows: 180px 0 0;
-    transition: 0.3s;
-  }
-  .right {
-    justify-self: right;
-    min-height: 20px;
-    max-height: 125px;
-    transition: 0.3s;
+    transition: 0.3s ease;
   }
 }
 

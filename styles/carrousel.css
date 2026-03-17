@@ -16,7 +16,7 @@
   align-items: flex-end;
   justify-content: center;
   gap: 1em;
-  animation: spin 40s infinite linear;
+  animation: spin 35s infinite linear;
   padding-right: 1em;
 }
 .card {
@@ -28,8 +28,8 @@
   align-content: end;
 }
 @keyframes spin {
-  from {translate: 0;}
-  to {translate: -100%}
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
 .card img {

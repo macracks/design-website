@@ -2,11 +2,10 @@
   margin: 100px 10% 0 10%;
   transition: 0.3s;
 }
-/* ── FILTER BAR ─────────────────────────────────────────────── */
+/* PILL BAR */
 
 .filter-bar {
   margin-bottom: 30px;
-  /* Prevent the bar itself from clipping the scrollbar on iOS */
   overflow: hidden;
   padding: 0;
 }
@@ -15,28 +14,28 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-wrap: nowrap;          /* Never wrap — scroll instead */
+  flex-wrap: nowrap;
   gap: 0;
   list-style: none;
   margin: 0;
   padding: 0;
 
-  /* Horizontal scroll on narrow screens */
+
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;      /* Hide scrollbar Firefox */
+  scrollbar-width: none;
 }
 
+/* CHATGPT TOLD ME TO ADD THIS J'ai aucune idée what that is*/
 .filter-list::-webkit-scrollbar {
-  display: none;              /* Hide scrollbar Chrome/Safari */
+  display: none;
 }
 
-/* "Tous" gets extra right margin to create the big visual gap */
+
 .filter-list li:first-child {
   margin-right: 1.2em;
 }
 
-/* All other items sit close together */
 .filter-list li + li {
   margin-right: 1.2em;
 }
@@ -64,7 +63,7 @@
 }
 
 
-/* ── PROJECT GRID ───────────────────────────────────────────── */
+/* GRILLE DES PROJETS */
 
 .projects-grid {
   display: grid;
@@ -74,7 +73,7 @@
 }
 
 
-/* ── PROJECT CARD ───────────────────────────────────────────── */
+/* CARD: PROJET */
 
 .project-card {
   display: block;
@@ -82,7 +81,7 @@
   color: inherit;
 }
 
-/* Image container: clips the padding animation */
+
 .project-card__img-wrapper {
   width: 100%;
   overflow: hidden;
@@ -91,26 +90,26 @@
 .project-card__img-wrapper img {
   display: block;
   width: 100%;
-  height: auto;               /* Image dictates its own height — no cropping */
+  height: auto;
   padding: 0;
   transition: 0.3s ease;
 }
 
-/* Hover: image shrinks inward with padding */
+/* EFFET HOVER (PADDING) */
 .project-card:hover .project-card__img-wrapper img {
   scale: 0.983;
   transition: 0.3s ease;
 }
 
 
-/* ── TAG PILLS AND TITLE ──────────────────────────────────────────────── */
+/* TITRE ET TAG PILLS */
 .project-title {
   margin-top: 6px;
 }
 
 .project-card__tags {
   display: flex;
-  flex-wrap: wrap;            /* Tags CAN line-break if there are many */
+  flex-wrap: wrap;
   gap: 6px;
   margin-top: 6px;
   margin-bottom: 14px;
@@ -118,8 +117,8 @@
 
 .tag {
   display: inline-block;
-  background: #fce0e5;
-  color: #E83151;
+  background: #e5f1fc;
+  color: #1684eb;
   font-size: 0.85rem;
   padding: 3px 9px;
   border-radius: 6px;
