@@ -10,11 +10,11 @@
   transition: 0.3s;
 }
 
-.item {
+/* .item {
   display: grid;
-  grid-template-rows: auto 200px; /* MODIFIER ICI */
+  grid-template-rows: auto 200px;
   gap: 2.5em;
-}
+} */
 
 .award-grid {
   margin: 0.5em 0;
@@ -113,7 +113,7 @@ p {
   }
   .award-grid,
   .award-description {
-    grid-template-columns: 6fr 2fr; /* remove the year column */
+    grid-template-columns: 6fr 2fr; /* Ôter la ligne des années */
   }
   .image-box img {
     border-radius: 14px;
@@ -121,7 +121,7 @@ p {
   }
 
   .annee {
-    display: none; /* hide the year */
+    display: none; /* Cacher les années? */
   }
   .annee-right {
     display: none;
