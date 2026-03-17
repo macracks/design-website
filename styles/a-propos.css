@@ -115,7 +115,8 @@ p {
   .award-description {
     grid-template-columns: 6fr 2fr; /* Ôter la ligne des années */
   }
-  .image-box img {
+  .image-box img,
+  .image-box-right img {
     border-radius: 14px;
     transition: 0.3s;
   }

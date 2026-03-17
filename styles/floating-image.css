@@ -16,7 +16,7 @@
   display: grid;
   height: calc(5 * (80vw / 8.5));
   grid-template-rows:  2fr 0.5fr 2fr;
-  background-color: green;
+  /*background-color: green;*/
 }
 
 .image-box {
@@ -27,16 +27,25 @@
   /*border: 1px solid black;*/
 }
 
-.image-box img {
+.image-box-right {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  /*border: 1px solid black;*/
+  display: flex;
+  justify-content: end;
+}
+
+.image-box img,
+.image-box-right img {
   padding: 8px;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.right {
-  justify-self: right;
-}
+
 
 @media (max-width: 865px) {
   .outer-image-grid {
@@ -52,13 +61,9 @@
     height: 240px;
     grid-template-rows: 240px 0 0;
   }
-  .right {
-    justify-self: right;
-    min-height: 20px;
-    max-height: 240px;
-    transition: 0.3s;
-  }
 }
+
+
 
 @media (max-width: 570px) {
   .right-image-grid {
