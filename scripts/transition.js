@@ -8,8 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Fix for browser back/forward navigation
-  window.addEventListener("pageshow", () => {
-    overlay.classList.add("fade-out");
+  window.addEventListener("pageshow", (event) => {
+
+    if (event.persisted) {
+
+      const overlay = document.querySelector(".page-transition");
+
+      overlay.classList.remove("fade-in");
+      overlay.classList.remove("fade-out");
+
+      void overlay.offsetWidth;
+
+      overlay.classList.add("fade-out");
+
+    }
+
   });
 
   document.querySelectorAll("a").forEach(link => {

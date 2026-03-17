@@ -8,9 +8,9 @@
   margin-right: 20px;
   padding: 7px 15px 7px 10px;
 
-  background-color: #fce0e5;
-  border: 1px solid #fce0e5;
-  color: #E83151;
+  background-color: #e5f1fc;
+  border: 1px solid #e5f1fc;
+  color: #1684eb;
   text-decoration: none;
 
   font-size: 0.85em;
@@ -28,7 +28,7 @@
 
 /* Hover state */
 .cv-button:hover {
-  border: 1px solid #E83151;
+  border: 1px solid #1684eb;
 }
 
 .cv-button:hover .cv-arrow {
