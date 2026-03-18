@@ -1,35 +1,24 @@
 .carrousel {
-  position: fixed; /*ADDED*/
-  bottom: 0; /*ADDED*/
-  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  /*border: 1px solid red;*/
-  display: flex;
-  overflow-x: auto;
   overflow: hidden;
-}
-.carrousel::-webkit-scrollbar {
-  display: none;
-}
-.group {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+}
+
+.track {
+  display: flex;
+  align-items: flex-end;
   gap: 1em;
-  animation: spin 35s infinite linear;
-  padding-right: 1em;
+  will-change: transform;
 }
+
 .card {
-  flex: 0 0 5.5em;
-  height: 8.25em;
-  font-size: 3rem;
-  border-radius: none;
-  text-align: center;
-  align-content: end;
-}
-@keyframes spin {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  flex-shrink: 0;
+  width: 250px;
+  height: auto;
 }
 
 .card img {

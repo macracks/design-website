@@ -6,13 +6,13 @@ html, body {
   margin-top: 70px;
   padding-top: 80px;
   margin-left: 10%;
-  margin-right: 10%;
+  margin-right: 3%;
   height: calc(50vh - 70px);
   transition: 0.3s;
 }
 
 /* Text settings */
-p {
+.hero-text p {
   font-size: 5em;       /* Text size */
   line-height: 0.85em;  /* Line Height */
   margin: 0;
@@ -46,7 +46,7 @@ p {
   width: auto;
 }
 
-.placeholder {
+.hero-text .placeholder {
   display: none;
 }
 
@@ -61,23 +61,24 @@ p {
 }
 
 @media (max-width: 865px) {
-  p {
+  .hero-text p {
     font-size: 4em;
     transition: 0.3s;
   }
 
+  /*Something here is happening, idk what*/
   .hero-text p:not(.placeholder),
   .hero-text .image-outer-container,
   .hero-text br {
     display: none;
   }
-  .placeholder {
+  .hero-text .placeholder {
     display: block;
   }
 }
 
 @media (max-width: 700px) {
-  p {
+  .hero-text p {
     font-size: 2.8em;
     transition: 0.3s;
   }
