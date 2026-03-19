@@ -59,6 +59,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+  transition: 0.3s ease;
 }
 
 .block-centered img,
@@ -73,6 +74,11 @@
    ===================== */
 
 @media (max-width: 767px) {
+  
+  .project-image-container img, .project-image-container video {
+    border-radius: 10px;
+  }
+
   .project-image-container {
     margin: 0 20px;
     transition: 0.3s;
@@ -84,8 +90,8 @@
     margin-bottom: 0;
   }
 
-  .block-double img:first-child,
-  .block-double video:first-child {
+  .block-double img,
+  .block-double video {
     margin-bottom: 20px;
   }
 
@@ -95,5 +101,6 @@
 
   .block-centered {
     width: 100%;
+    transition: 0.3s ease;
   }
 }
