@@ -1,0 +1,10 @@
+.annabelle-link,
+.annabelle-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.annabelle-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

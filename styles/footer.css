@@ -24,6 +24,17 @@
   display: block;
 }
 
+.marek-link,
+.marek-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.marek-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .footer-container {
     margin: 0px 20px;
