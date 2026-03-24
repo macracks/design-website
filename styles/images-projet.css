@@ -70,6 +70,32 @@
 }
 
 /* =====================
+   CREDITS
+   ===================== */
+   
+.image-credit-wrapper {
+  position: relative;
+}
+
+.block-single,
+.block-double,
+.block-centered {
+  position: relative;
+}
+ 
+.photo-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1em;
+  line-height: 1;
+  text-align: right;
+  pointer-events: none;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+/* =====================
    MOBILE
    ===================== */
 
@@ -93,6 +119,10 @@
   .block-double img,
   .block-double video {
     margin-bottom: 20px;
+  }
+
+  .photo-credit {
+    bottom: 30px;
   }
 
   .block-text {
