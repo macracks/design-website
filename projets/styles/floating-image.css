@@ -1,0 +1,122 @@
+
+.outer-image-grid {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  /*background-color: orange;*/
+}
+
+.left-image-grid {
+  display: grid;
+  height: calc(5 * (80vw / 8.5));
+  grid-template-rows: 4fr 0.5fr;
+  /*background-color: yellow;*/
+}
+
+.right-image-grid {
+  display: grid;
+  height: calc(5 * (80vw / 8.5));
+  grid-template-rows:  2fr 0.5fr 2fr;
+  /*background-color: green;*/
+}
+
+.image-box {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  /*border: 1px solid black;*/
+}
+
+.image-box-right {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  /*border: 1px solid black;*/
+  display: flex;
+  justify-content: end;
+}
+
+.image-box img,
+.image-box-right img {
+  padding: 8px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+@media (max-width: 865px) {
+  .outer-image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .left-image-grid {
+    height: calc(5 * (80vw / 6));
+    grid-template-rows: 4fr 0fr;
+  }
+  .right-image-grid {
+    height: 240px;
+    grid-template-rows: 240px 0 0;
+    transition: 0.3s ease;
+  }
+}
+
+
+
+@media (max-width: 570px) {
+  .right-image-grid {
+    height: 180px;
+    grid-template-rows: 180px 0 0;
+    transition: 0.3s ease;
+  }
+}
+
+@media (max-width: 425px) {
+  .right-image-grid {
+    height: 125px;
+    grid-template-rows: 180px 0 0;
+    transition: 0.3s ease;
+  }
+}
+
+.floating-image1 {
+  animation: float1 6.5s linear infinite;
+}
+
+@keyframes float1 {
+  from {
+    transform: rotate(0deg) translateY(-8px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateY(-8px) rotate(-360deg);
+  }
+}
+
+.floating-image2 {
+  animation: float2 5.5s linear infinite;
+}
+
+@keyframes float2 {
+  from {
+    transform: rotate(0deg) translateY(8px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateY(8px) rotate(-360deg);
+  }
+}
+
+.floating-image3 {
+  animation: float3 7.5s linear infinite;
+}
+
+@keyframes float3 {
+  from {
+    transform: rotate(-180deg) translateY(-8px) rotate(180deg);
+  }
+  to {
+    transform: rotate(180deg) translateY(-8px) rotate(-180deg);
+  }
+}

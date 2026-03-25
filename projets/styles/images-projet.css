@@ -1,0 +1,138 @@
+/* =====================
+   PROJECT IMAGE CONTAINER
+   ===================== */
+
+.project-image-container {
+  margin: 0 10%;
+  transition: 0.3s;
+}
+
+/* =====================
+   LEGO BLOCK 1 — Full width, single image/video
+   ===================== */
+
+.block-single {
+  margin-bottom: 20px;
+}
+
+.block-single img,
+.block-single video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =====================
+   LEGO BLOCK 2 — Full width, double image/video
+   ===================== */
+
+.block-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.block-double img,
+.block-double video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =====================
+   LEGO BLOCK 3 — 2/3 width, text
+   ===================== */
+
+.block-text {
+  width: calc(200% / 3);
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/* =====================
+   LEGO BLOCK 4 — 1/2 width, centered
+   ===================== */
+
+.block-centered {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.block-centered img,
+.block-centered video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =====================
+   CREDITS
+   ===================== */
+   
+.image-credit-wrapper {
+  position: relative;
+}
+
+.block-single,
+.block-double,
+.block-centered {
+  position: relative;
+}
+ 
+.photo-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.75em;
+  font-weight: 550;
+  line-height: 1;
+  text-align: right;
+  pointer-events: none;
+  color: white;
+  mix-blend-mode: difference;
+  opacity: 0.5;
+}
+
+/* =====================
+   MOBILE
+   ===================== */
+
+@media (max-width: 767px) {
+  
+  .project-image-container img, .project-image-container video {
+    border-radius: 10px;
+  }
+
+  .project-image-container {
+    margin: 0 20px;
+    transition: 0.3s;
+  }
+
+  .block-double {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .block-double img,
+  .block-double video {
+    margin-bottom: 20px;
+  }
+
+  .photo-credit {
+    bottom: 30px;
+  }
+
+  .block-text {
+    width: 100%;
+  }
+
+  .block-centered {
+    width: 100%;
+    transition: 0.3s ease;
+  }
+}

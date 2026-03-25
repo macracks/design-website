@@ -1,0 +1,93 @@
+html, body {
+  overflow: hidden;
+}
+
+.hero-text {
+  margin-top: 70px;
+  padding-top: 80px;
+  margin-left: 10%;
+  margin-right: 3%;
+  height: calc(50vh - 70px);
+  transition: 0.3s;
+}
+
+/* Text settings */
+.hero-text p {
+  font-size: 5em;       /* Text size */
+  line-height: 0.85em;  /* Line Height */
+  margin: 0;
+  display: inline-block;
+  margin-right: 10px; /* Margin to simulate space feel */
+  transition: 0.3s;
+}
+
+/* OUTER CONTAINER */
+.image-outer-container {
+  display: inline-block;
+  position: relative;
+  height: 3.025em; /* <-- adjusted this perfectly */
+  margin: 0.5em 0;
+  margin-right: 95px; /* Margin after and image to simulate space after an image */
+  margin-left: 3px; /* Same margin normal text has with it's text box with nothing before it */
+}
+
+/* INNER CONTAINER */
+.image-inner-container {
+  position: absolute;
+  top: 0;
+  height: 117%; /* <-- adjusted this perfectly */
+  width: auto;
+}
+
+/* IMAGE */
+.image-inner-container img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.hero-text .placeholder {
+  display: none;
+}
+
+.web-break {
+  display: none;
+}
+
+@media (max-width: 1273px) {
+  .web-break {
+    display: block;
+  }
+}
+
+@media (max-width: 865px) {
+  .hero-text p {
+    font-size: 4em;
+    transition: 0.3s;
+  }
+
+  /*Something here is happening, idk what*/
+  .hero-text p:not(.placeholder),
+  .hero-text .image-outer-container,
+  .hero-text br {
+    display: none;
+  }
+  .hero-text .placeholder {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-text p {
+    font-size: 2.8em;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 535px) {
+  .hero-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+}

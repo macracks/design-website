@@ -1,0 +1,142 @@
+.project-container {
+  margin: 100px 10% 0 10%;
+  transition: 0.3s;
+}
+/* PILL BAR */
+
+.filter-bar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+/* CHATGPT TOLD ME TO ADD THIS J'ai aucune idée what that is*/
+.filter-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.filter-list li:first-child {
+  margin-right: 1.2em;
+}
+
+.filter-list li + li {
+  margin-right: 1.2em;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 450;
+  color: inherit;
+  white-space: nowrap;
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+.filter-btn:hover {
+  opacity: 0.7;
+}
+
+.filter-btn.active {
+  opacity: 1;
+}
+
+
+/* GRILLE DES PROJETS */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;         /* Crucial for the Pinterest / masonry look */
+}
+
+
+/* CARD: PROJET */
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.project-card__img-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-card__img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  transition: 0.3s ease;
+}
+
+/* EFFET HOVER (PADDING) */
+.project-card:hover .project-card__img-wrapper img {
+  scale: 0.983;
+  transition: 0.3s ease;
+}
+
+
+/* TITRE ET TAG PILLS */
+.project-title {
+  margin-top: 6px;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  display: inline-block;
+  background: #e5f1fc;
+  color: #1684eb;
+  font-size: 0.85rem;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+
+/* ── MOBILE: single column below 767px ──────────────────────── */
+
+@media (max-width: 767px) {
+  .project-container {
+    margin: 100px 20px 0 20px;
+    transition: 0.3s;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card__img-wrapper img {
+    border-radius: 6px;
+    transition: 0.3s ease;
+  }
+}

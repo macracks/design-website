@@ -1,0 +1,54 @@
+/* HEADER CONTAINER */
+.header-box {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  height: 100%;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+.portfolio-logo {
+  width: 160px;
+  object-fit: contain;
+}
+
+nav > a {
+  text-decoration: none;
+  color: black;
+}
+
+/* NAVIGATION LIST */
+.navigation-list {
+  display: flex; 
+  gap: 20px; 
+  list-style: none;
+  padding: 0; 
+  margin: 0; 
+  align-items: center; 
+}
+
+/* NAV LINKS */
+.navigation-list a {
+  text-decoration: none; 
+  color: black;
+}
+
+@media (max-width: 425px) {
+  nav {
+    font-size: 13px;
+    transition: 0.3s;
+  }
+  .portfolio-logo {
+    width: 110px;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,28 @@
+.carrousel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.track {
+  display: flex;
+  align-items: flex-end;
+  gap: 1em;
+  will-change: transform;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 250px;
+  height: auto;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
