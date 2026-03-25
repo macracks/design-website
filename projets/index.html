@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Marek Blais</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <title>Projets | Marek Blais</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/transition.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/landing.css">
-  <link rel="stylesheet" href="styles/carrousel.css">
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/transition.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/button.css">
+  <link rel="stylesheet" href="../styles/contact.css">
+  <link rel="stylesheet" href="../styles/projets.css">
 </head>
 <body>
   <!-- WHITE FADE TRANSITION -->
 
   <div class="page-transition"></div>
 
-  
+  <!--<div class="page-transition"></div>-->
   <div class="header-box">
     <nav>
       <a href="/">
         <div class="portfolio-logo">
-          <img src="assets/marekblais.svg">
+          <img src="../assets/marekblais.svg">
         </div>
       </a>
 
@@ -35,35 +37,145 @@
       </ul>
     </nav>
   </div>
-  <div class="hero-text">
-    <p>Designer montréalais, spécialisé</p> <br>
-    <div class="image-outer-container">
-      <div class="image-inner-container">
-        <img src="assets/graphique.jpg" alt="graphique">
-      </div>
-    </div>
-    <p>graphique et</p> <br class="web-break">
-    <div class="image-outer-container">
-      <div class="image-inner-container">
-        <img src="assets/industriel.jpg" alt="industriel">
-      </div>
-    </div>
-    <p>industriel</p>
-    <p class="placeholder">Designer montréalais, spécialisé graphique et industriel</p>
+  
+  <div class="project-container">
+    <main class="projects-main">
+    <!-- ── FILTER BAR ─────────────────────────────────────────── -->
+      <nav class="filter-bar" aria-label="Filtres de projets">
+        <ol class="filter-list">
+          <li><button class="filter-btn active" data-filter="tous">Tous</button></li>
+          <li><button class="filter-btn" data-filter="identite">Identité</button></li>
+          <li><button class="filter-btn" data-filter="logo">Logo</button></li>
+          <li><button class="filter-btn" data-filter="visuel">Visuel</button></li>
+          <li><button class="filter-btn" data-filter="affiche">Affiche</button></li>
+          <li><button class="filter-btn" data-filter="objet">Objet</button></li>
+          <li><button class="filter-btn" data-filter="mobilier">Mobilier</button></li>
+          <li><button class="filter-btn" data-filter="service">Service</button></li>
+        </ol>
+      </nav>
+    
+      <!-- ── PROJECT GRID ───────────────────────────────────────── -->
+      <section class="projects-grid" id="projects-grid">
+    
+        <!-- PROJECT CARD TEMPLATE — duplicate and fill in for each project -->
+        <!-- data-tags must match the data-filter values above, space-separated -->
+
+        <a href="flows" class="project-card" data-tags="logo">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail7.jpg" alt="Flows" loading="lazy">
+          </div>
+          <p class="project-title">Flows</p>
+          <div class="project-card__tags">
+            <span class="tag">LOGO</span>
+          </div>
+        </a>
+        
+        <a href="studio-latrompette" class="project-card" data-tags="identite logo">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail3.jpg" alt="[Nom du projet 3]" loading="lazy">
+          </div>
+          <p class="project-title">Studio Latrompette</p>
+          <div class="project-card__tags">
+            <span class="tag">IDENTITÉ</span>
+            <span class="tag">LOGO</span>
+          </div>
+        </a>
+    
+        <a href="vague-dimpact" class="project-card" data-tags="logo visuel">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail4.jpg" alt="[Nom du projet 4]" loading="lazy">
+          </div>
+          <p class="project-title">Frandon Seafoods</p>
+          <div class="project-card__tags">
+            <span class="tag">LOGO</span>
+            <span class="tag">VISUEL</span>
+          </div>
+        </a>
+
+        <a href="milf-fest" class="project-card" data-tags="identite logo visuel affiche">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail8.jpg" alt="MILF Fest" loading="lazy">
+          </div>
+          <p class="project-title">MILF Fest</p>
+          <div class="project-card__tags">
+            <span class="tag">IDENTITÉ</span>
+            <span class="tag">LOGO</span>
+            <span class="tag">AFFICHE</span>
+            <span class="tag">VISUEL</span>
+          </div>
+        </a>
+
+        <a href="stockdeck" class="project-card" data-tags="objet service identite logo">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail5.avif" alt="Stockdeck" loading="lazy">
+          </div>
+          <p class="project-title">StockDeck</p>
+          <div class="project-card__tags">
+            <span class="tag">OBJET</span>
+            <span class="tag">SERVICE</span>
+            <span class="tag">IDENTITÉ</span>
+            <span class="tag">LOGO</span>
+          </div>
+        </a>
+    
+        <a href="" class="project-card" data-tags="objet mobilier">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail6.jpg" alt="Orme" loading="lazy">
+          </div>
+          <p class="project-title">Orme</p>
+          <div class="project-card__tags">
+            <span class="tag">OBJET</span>
+            <span class="tag">MOBILIER</span>
+          </div>
+        </a>
+
+        <a href="struthio" class="project-card" data-tags="objet identite">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail2.jpg" alt="[Nom du projet 2]" loading="lazy">
+          </div>
+          <p class="project-title">Struthio</p>
+          <div class="project-card__tags">
+            <span class="tag">OBJET</span>
+            <span class="tag">IDENTITÉ</span>
+          </div>
+        </a>
+
+        <a href="volumique-2023" class="project-card" data-tags="objet">
+          <div class="project-card__img-wrapper">
+            <img src="../assets/thumbnail1.jpg" alt="[Nom du projet 1]" loading="lazy">
+          </div>
+          <p class="project-title">Volumique 2023</p>
+          <div class="project-card__tags">
+            <span class="tag">OBJET</span>
+          </div>
+        </a>
+    
+      </section>
+    
+    </main>
   </div>
 
-  <div class="carrousel">
-    <div class="track">
-      <div class="card"><img src="assets/carrousel/carrousel1.jpg" alt=""></div>
-      <div class="card"><img src="assets/carrousel/carrousel3.avif" alt=""></div>
-      <div class="card"><img src="assets/carrousel/carrousel2.avif" alt=""></div>
-      <div class="card"><img src="assets/carrousel/carrousel4.jpg" alt=""></div>
-      <div class="card"><img src="assets/carrousel/carrousel5.jpg" alt=""></div>
-      <div class="card"><img src="assets/carrousel/carrousel6.jpg" alt=""></div>
+  <footer class="footer-container"> <!-- SECTION FOOTER -->
+    <div>
+      <img src="../../assets/marekblais.svg">
+      <div class="footer-info">
+        <p class="footer-city">Montréal, QC</p>
+        <p>
+          <a href="mailto:marekblais@hotmail.ca" class="marek-link">
+            marekblais@hotmail.ca
+          </a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/marek-blais/" 
+            class="marek-link" 
+            target="_blank">
+            LinkedIn
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
-
-  <script src="scripts/carrousel.js"></script>
-  <script src="scripts/transition.js"></script>
+  </footer>
+  <script src="../scripts/transition.js"></script>
+  <script src="../scripts/tagpills.js"></script>
 </body>
 </html>
