@@ -97,6 +97,20 @@
   opacity: 0.5;
 }
 
+.photo-credit-single {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.75em;
+  font-weight: 550;
+  line-height: 1;
+  text-align: right;
+  pointer-events: none;
+  color: white;
+  mix-blend-mode: difference;
+  opacity: 0.5;
+}
+
 /* =====================
    MOBILE
    ===================== */
